@@ -41,3 +41,25 @@ variable "list" {
   ]
 }
 
+# List can have combination of multiple data types also.
+
+variable "map1" {
+  default = {
+    aws = {
+      trainer = "Sai"
+      duration = 30
+    }
+    devops = {
+      trainer = "Ram"
+      duration = 20
+    }
+  }
+}
+
+output "list1_1" {
+  value = var.list1[2]
+}
+
+output "map1_aws_trainer" {
+  value = var.map1["aws"]["trainer"]
+}

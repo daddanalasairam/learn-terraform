@@ -1,3 +1,5 @@
+#For_each Loop
+
 variable "fruits" {
   default = {
     apple = {}

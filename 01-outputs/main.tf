@@ -1,3 +1,3 @@
 output "URL" {
-  default = "example.com"
+  value = "example.com"
 }

@@ -20,15 +20,15 @@ resource "aws_instance" "instance" {
   instance_type = "t3.small"
   vpc_security_group_ids = ["sg-0d386c7e59b2416fe"]
   tags = {
-    Name = var.instances[count.index]
+    Name = each.key
   }
 }
 
 resource "aws_route53_record" "record" {
-  count = length(var.instances)
+  for_each = var.instances
   zone_id = "Z08535891FNQ7VOKD83G7"
-  name    = "${var.instance[count.index]}-dev.sairamdevops.online"
+  name    = "${each.key}-dev.sairamdevops.online"
   type    = "A"
   ttl     = "30"
-  records = [aws_instance.instance[count.index].private_ip]
+  records = [aws_instance.instance[each.key].private_ip]
 }

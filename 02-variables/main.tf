@@ -32,7 +32,7 @@ variable "str1" {
 # Numbers, Booleans & Strings
 
 #Variable types
-variable "sr2" {
+variable "str2" {
   default = "World"
 }
 

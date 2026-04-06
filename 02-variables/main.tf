@@ -13,6 +13,9 @@ output "URL1" {
   value = "URL - ${var.URL}"
 }
 
+#CLI Variable
+terraform apply -var="URL=google.com"
+
 # Data types
 variable "num1" {
   default = 10

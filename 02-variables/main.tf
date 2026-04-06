@@ -1,3 +1,4 @@
+#If user doesn’t give value → use this
 variable "URL" {
   default = "example.com"
 }

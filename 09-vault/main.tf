@@ -23,3 +23,5 @@ resource "local_file" "foo" {
 # output "json" {
 #   value = data.vault_kv_secret_v2.example.data_json
 # }
+
+#To check the key in the file use the command : cat /tmp/secret
